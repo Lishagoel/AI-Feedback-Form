@@ -5,7 +5,13 @@ import styles from './page.module.css';
 
 export default function HomePage() {
   const [audioFile, setAudioFile] = useState<File | null>(null);
-  const [response, setResponse] = useState<any>(null);
+  type FeedbackResponse = {
+  scores: Record<string, number>;
+  overallFeedback: string;
+  observation: string;
+};
+
+  const [response, setResponse] = useState<FeedbackResponse | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleProcess = async () => {

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function POST(req: NextRequest) {
   // Simulate slight delay to mimic real API behavior
   await new Promise((res) => setTimeout(res, 1000));
